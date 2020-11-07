@@ -42,7 +42,7 @@ namespace ElevenNote.Data
             modelBuilder
                 .Configurations
                 .Add(new IndentityUserLoginConfiguration())
-                .Add(new IndentityUserRoleConfiguration())
+                .Add(new IndentityUserRoleConfiguration());
         }
     }
 
