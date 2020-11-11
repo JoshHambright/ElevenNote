@@ -74,6 +74,26 @@ namespace ElevenNote.Services
                     };
             }
         }
+        public IEnumerable<NoteCatListItem> GetNoteByCategory(int categoryId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Notes
+                        .Where(e => e.OwnerId == _userId && e.CategoryId == categoryId)
+                        .Select(
+                            e =>
+                                new NoteCatListItem
+                                {
+                                    NoteId = e.NoteId,
+                                    Title = e.Title,
+                                    CreatedUtc = e.CreatedUtc
+                                }
+                            );
+                return query.ToArray();
+            }
+        }
         public bool UpdateNote(NoteEdit model)
         {
             using (var ctx = new ApplicationDbContext())

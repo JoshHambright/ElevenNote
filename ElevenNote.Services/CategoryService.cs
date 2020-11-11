@@ -45,7 +45,8 @@ namespace ElevenNote.Services
                                 {
                                     CategoryId = e.CategoryId,
                                     Name = e.Name,
-                                    CreatedUtc = e.CreatedUtc
+                                    CreatedUtc = e.CreatedUtc,
+                                    //Notes = e.Notes //method that returns a list of NotesByCat
                                 }
                         );
                 return query.ToArray();
@@ -67,7 +68,7 @@ namespace ElevenNote.Services
                         Name = entity.Name,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
-                        //Notes = entity.Notes
+                       // Notes = ctx.Notes.(id)
                     };
             }
         }
