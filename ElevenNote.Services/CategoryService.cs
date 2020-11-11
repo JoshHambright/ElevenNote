@@ -43,7 +43,7 @@ namespace ElevenNote.Services
                             e =>
                                 new CategoryListItem
                                 {
-                                    CategoryID = e.CategoryId,
+                                    CategoryId = e.CategoryId,
                                     Name = e.Name,
                                     CreatedUtc = e.CreatedUtc
                                 }
@@ -66,7 +66,8 @@ namespace ElevenNote.Services
                         CategoryId = entity.CategoryId,
                         Name = entity.Name,
                         CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
+                        ModifiedUtc = entity.ModifiedUtc,
+                        //Notes = entity.Notes
                     };
             }
         }
@@ -78,7 +79,7 @@ namespace ElevenNote.Services
                 var entity =
                     ctx
                         .Categories
-                        .Single(e => e.CategoryId == model.CategoryID && e.OwnerId == _userId);
+                        .Single(e => e.CategoryId == model.CategoryId && e.OwnerId == _userId);
                 entity.Name = model.Name;
                 entity.ModifiedUtc = DateTimeOffset.Now;
                 return ctx.SaveChanges() == 1;

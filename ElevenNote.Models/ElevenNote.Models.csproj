@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="CategoryCreate.cs" />
     <Compile Include="CategoryDetail.cs" />
-    <Compile Include="CategoryDetails.cs" />
     <Compile Include="CategoryEdit.cs" />
     <Compile Include="CategoryListItem.cs" />
     <Compile Include="NoteCreate.cs" />
@@ -68,6 +67,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElevenNote.Data\ElevenNote.Data.csproj">
+      <Project>{60FCC6D1-DE3D-46D2-B52C-70ACF7D0E783}</Project>
+      <Name>ElevenNote.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

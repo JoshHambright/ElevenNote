@@ -9,7 +9,7 @@ namespace ElevenNote.Models
 {
     public class CategoryListItem
     {
-        public int CategoryID { get; set; }
+        public int CategoryId { get; set; }
         public string Name { get; set; }
         [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }

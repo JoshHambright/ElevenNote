@@ -86,13 +86,9 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202011071527112_InitialCreate.cs" />
-    <Compile Include="Migrations\202011071527112_InitialCreate.Designer.cs">
-      <DependentUpon>202011071527112_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011111555151_added-categories.cs" />
-    <Compile Include="Migrations\202011111555151_added-categories.Designer.cs">
-      <DependentUpon>202011111555151_added-categories.cs</DependentUpon>
+    <Compile Include="Migrations\202011111859227_three.cs" />
+    <Compile Include="Migrations\202011111859227_three.Designer.cs">
+      <DependentUpon>202011111859227_three.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
@@ -103,11 +99,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011071527112_InitialCreate.resx">
-      <DependentUpon>202011071527112_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011111555151_added-categories.resx">
-      <DependentUpon>202011111555151_added-categories.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011111859227_three.resx">
+      <DependentUpon>202011111859227_three.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
