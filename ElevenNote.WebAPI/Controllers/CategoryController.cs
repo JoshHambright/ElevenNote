@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace ElevenNote.WebAPI.Controllers
 {
-    public class CategoriesController : ApiController
+    public class CategoryController : ApiController
     {
         private CategoryService CreateCategoryService()
         {
@@ -29,6 +29,24 @@ namespace ElevenNote.WebAPI.Controllers
             if (!service.CreateCategory(category))
                 return InternalServerError();
             return Ok();
+        }
+
+        //READ
+
+        //Get All Categories
+        public IHttpActionResult Get()
+        {
+            CategoryService categoryService = CreateCategoryService();
+            var categories = categoryService.GetCategories();
+            return Ok(categories);
+        }
+
+        //GetByID
+        public IHttpActionResult Get(int id)
+        {
+            CategoryService categoryService = CreateCategoryService();
+            var category = categoryService.GetCategoryById(id);
+            return Ok(category);
         }
     }
 }
